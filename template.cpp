@@ -9,6 +9,7 @@ typedef double FLOAT;
 cout.precision(10);
 */
 
+
 int main() {
     return 0;
 }
