@@ -11,11 +11,19 @@
 using namespace std;
 
 // ----- Types -----
-typedef long long INT;
-typedef unsigned long long U_INT;
+
 // double precision: 14
-typedef double FLOAT;
-typedef long double DOUBLE;
+typedef vector<INT> VI;
+typedef vector<VI> VVI;
+typedef long long L;
+typedef vector<L> VL;
+typedef vector<VL> VVL;
+typedef pair<int, int> PII;
+typedef vector<PII> VPII;
+typedef vector<double> VD;
+typedef vector<VD> VVD;
+
+const L INF = numeric_limits<L>::max() / 4;
 
 /*
 cout.precision(10);
