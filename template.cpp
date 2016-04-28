@@ -46,8 +46,8 @@ cout.precision(10);
 #define SIZE(a)      (int)(a.size())
 #define MIN(a,b)     (a) = min((a),(b))
 #define MAX(a,b)     (a) = max((a),(b))
-#define input(in)    freopen(in,"r",stdin)
-#define output(out)  freopen(out,"w",stdout)
+#define INPUT(in)    freopen(in,"r",stdin)
+#define OUTPUT(out)  freopen(out,"w",stdout)
 #define ALL(a)       a.begin(),a.end()
 #define RALL(a)      a.rbegin(),a.rend()
 #define SIZE(a)      (int)(a.size())
@@ -57,10 +57,10 @@ cout.precision(10);
 #define FOUT(x)      freopen(x,"w",stdout)
 #define FCLOSE       {fclose(stdin); fclose(stdout);}
  
-#define fi           first
-#define se           second
-#define pb           push_back
-#define mp           make_pair
+#define F           first
+#define S           second
+#define PB           push_back
+#define MP           make_pair
 
 int main() {
     return 0;
