@@ -62,6 +62,27 @@ cout.precision(10);
 #define pb           push_back
 #define mp           make_pair
 
+
 int main() {
+    int arr[1005];
+    RESET(arr, 0);
+    
+    int n;
+    cin >> n;
+    
+    FOR(i, 0, n) {
+        int x;
+        cin >> x;
+        arr[x]++;
+    }
+    
+    int maxm = 0;
+    int count = 0;
+    FOR(i, 0, 1005) {
+        maxm = MAX(maxm, arr[i]);
+        if (arr[i] > 0) count++;
+    }
+    cout << maxm << " " << count << endl;
+    
     return 0;
 }
