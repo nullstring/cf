@@ -33,7 +33,7 @@ cout.precision(10);
 */
 
 // ----- Controls -----
-#define FORIT(a,b)   for (__typeof((b).begin()) (a)=(b).begin(); (a)!=(b).end(); (a)++)
+#define FORIT(a,b)   for (auto (a)=(b).begin(); (a)!=(b).end(); (a)++)
 #define FOR(a,b,c)   for (int (a)=(b); (a)<(c); (a)++)
 #define FORN(a,b,c)  for (int (a)=(b); (a)<=(c); (a)++)
 #define FORD(a,b,c)  for (int (a)=(b); (a)>=(c); (a)--)
@@ -62,6 +62,41 @@ cout.precision(10);
 #define PB           push_back
 #define MP           make_pair
 
+#define MX 105
+
+int price[MX];
+map<string, int> freq;
+
 int main() {
+    int n, m;
+    cin >> n >> m;
+    
+    RESET(price, 0);
+    REP(i, n) {
+        cin >> price[i];
+    }
+    sort(price, price+n);
+    
+    REP(i, m) {
+        string s;
+        cin >> s;
+        freq[s]++;
+    }
+    VI vec;
+    for(auto p : freq) {
+        vec.PB(p.second);
+    }
+    sort(RALL(vec));
+    
+    int i = 0;
+    int minn = 0;
+    int maxx = 0;
+    for (auto v_i : vec) {
+        minn += v_i*price[i];
+        maxx += v_i*price[n-i-1];
+        i++; 
+    }
+    cout << minn << " " << maxx << endl;
+    
     return 0;
 }
